@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{%block content%}
+{% if alunos %}
+<table class="table">
+    <tr>
+        <th>Ação</th>
+        <th>Nome</th>
+        <th>Email</th>
+    </tr>
+    {% for aluno in alunos %}
+    <tr>
+        <td>
+            <a href="{% url 'aluno' id=aluno.id %}" class="btnBody">Visualizar</a>
+            <a href="{% url 'remove' id=aluno.id %}" class="btnBody">Remover</a>
+        </td>
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.email }}</td>
+
+        {% endfor %}
+    </tr>
+</table>
+{% else %}
+<p class="Alerta">Sem alunos para mostrar no momento</p>
+{% endif %}
+{% endblock %}

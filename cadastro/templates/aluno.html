@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    
+    <!-- <img src="{{ aluno.foto.url }}" alt="imagem de {{aluno.nome}}"> -->
+ 
+    <h3 class="mb-3 nome">{{ aluno.nome }}</h3>
+
+    <div class="infosPessoais">
+        <h3>Informações pessoais</h3>
+
+        <div class="row">
+            <div class="col-12">
+                <p>Idade: {{aluno.idade}}</p>
+                <p>Email: {{aluno.email}}</p>
+                <p>Contato: {{aluno.contato}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="infosNota border p3">
+        <h3>Notas do Aluno:</h3>
+
+        <div class="row">
+            <div class="col-12">
+                
+                <table class="table2">
+                    <tr>
+                        <th>1º Bimestre</th>
+                        <th>2º Bimestre</th>
+                        <th>3º Bimestre</th>
+                        <th>4º Bimestre</th>
+                    </tr>
+                    <tr>
+                        <td id="n1">{{ aluno.nota1 }}</td>
+                        <td id="n2">{{ aluno.nota2 }}</td>
+                        <td id="n3">{{ aluno.nota3 }}</td>
+                        <td id="n4">{{ aluno.nota4 }}</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+    <button class="btnBody" onclick="Calcular()">Status Aluno</button>
+    <div id="resultado"></div>
+
+    <a href="{% url 'index' %}" class="btnBody">Voltar</a>
+    <a href="{% url 'remove' id=aluno.id %}" class="btnBody">Remover</a>
+    
+</div>
+
+{% endblock %}
