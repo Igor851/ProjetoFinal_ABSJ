@@ -8,12 +8,21 @@ body{
     rgb(88, 19, 116),
     rgb(59, 0, 168)
     );
+    font-family: sans-serif;
+}
+/* -------------------------------------------------alerta----------------------------------------------------- */
+.Alerta{
+    background-color: #140d1f;
+    color: white;
+    text-align: center;
+    font-size: larger;
 }
 /*-----------------------------------------CSS PARA A BASE E O INDEX--------------------------------------------*/
-.titulo{
+.titulo {
     text-align: center;
     color: white;
-}
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
 .table{
     margin: 20px auto;
     width:50%
@@ -51,9 +60,12 @@ img{
     padding: 5px;
     border-radius: 10px;
 }
-.btn{
-    margin-top: 20px;
-}
+button{ 
+    border: none; 
+    color: inherit; /* Usa a cor de texto padrão do elemento pai */
+    padding: 0; 
+  }
+
 .btnHeader{
     margin-top: 5px;
     border-radius: 5px;
@@ -71,16 +83,31 @@ img{
     text-decoration: none;
     box-shadow: 1px 1px 2px black;
 }
-.table2{
-    margin: 20px auto;
-    width:50%;
+
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
 }
-.table2 tr td{
+
+.table2 th, .table2 td {
+    border: 1px solid #4d4d4d;
+    padding: 8px;
     text-align: center;
 }
-.table2 tr th{
-    text-align: center;
+
+.table2 th {
+    background-color: #696969; /* Cinza mais escuro para o cabeçalho */
 }
+
+.table2 tr:nth-child(even) {
+    background-color: #b4b4b4; /* Cinza mais claro para as linhas pares */
+}
+
+/* .table2 tr:nth-child(odd) {
+    background-color: #a251c7;  Branco para as linhas ímpares 
+} */
+
 #resultado{
     margin: 8px auto;
     font-size: large;
@@ -106,8 +133,8 @@ fieldset legend{
 }
 
 /* *** Inputs *** */
-input[type=text], input[type=Number], input[type=file], input[type=date],input[type=email], input[type=password] ,select{
-    width: 70%;
+input[type=text], input[type=Number],input[type=email], input[type=password] ,select{
+    width: 40%;
     height: 40px;
     margin: 10px 0 20px 0;
     border: 2px solid #eee;
@@ -144,4 +171,7 @@ textarea{
     flex-direction: row;
     width: 90%;
     justify-content: space-around;
+}
+form{
+    margin-left: 20px;
 }

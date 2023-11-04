@@ -21,10 +21,8 @@ function Calcular(){
         status = 'Reprovado'
     }
 
-    document.getElementById('resultado').innerHTML = 'A média do Aluno é ' + soma + ' e ele está ' + status
+    document.getElementById('resultado').innerHTML = 'A média final do aluno é ' + soma + ' e este aluno está ' + status
 }
 
-// function Trocar(){
-//     document.getElementById('resultado').style.color = "red"
-// }
+
 

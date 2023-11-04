@@ -3,7 +3,6 @@
 
 <div class="container">
     
-    <!-- <img src="{{ aluno.foto.url }}" alt="imagem de {{aluno.nome}}"> -->
  
     <h3 class="mb-3 nome">{{ aluno.nome }}</h3>
 
@@ -20,7 +19,7 @@
     </div>
 
 
-    <div class="infosNota border p3">
+    <div class="infosNota">
         <h3>Notas do Aluno:</h3>
 
         <div class="row">
@@ -45,7 +44,7 @@
         </div>
     </div>
 
-    <button class="btnBody" onclick="Calcular()">Status Aluno</button>
+    <button id="btn" class="btnBody" onclick="Calcular()">Status Aluno</button>
     <div id="resultado"></div>
 
     <a href="{% url 'index' %}" class="btnBody">Voltar</a>
